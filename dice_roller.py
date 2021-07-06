@@ -28,15 +28,16 @@ def main():
     print(f'{teamname} have rolled a total of {dice_sum}')
     results.append([teamname , dice_sum])
 
-  print(results)
+    # print(results)
 
-  for i in range(0, len(results)):
-    #print(i)
-    print('Team:',results[i][0],' scored ', results[i][1] ,' points')
+##  for i in range(0, len(results)):
+##    #print(i)
+##    print('Team:',results[i][0],' scored ', results[i][1] ,' points')
 
-  results.sort(key=sort_by)
-  
-  for i in range(0, len(results)):
+  results.sort(key=sort_by, reverse = True)
+
+  print('The winner is : ', results[0][0],' that scored ', results[0][1], ' points!') 
+  for i in range(1, len(results)):
     #print(i)
     print('Team:',results[i][0],' scored ', results[i][1] ,' points')
 
